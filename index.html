@@ -2,7 +2,7 @@
 <iframe width="1000" height="500" src="https://wasteof.money"></iframe>
 <script>
   function brainrot() {
-    fetch("https://api.allorigins.win/get?url=https://api.wasteof.money/random-post").then(r=>r.json()).then(e => {
+    fetch("https://api.allorigins.win/get?url=https://api.wasteof.money/random-post", {cache: "no-cache"}).then(r=>r.json()).then(e => {
       document.querySelector("iframe").src = "https://wasteof.money/posts/" + JSON.parse(e.contents)._id
     })
   }
